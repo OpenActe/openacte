@@ -1,0 +1,6 @@
+{
+  "name": "openacte",
+  "description": "Catalogue of the OpenActe repositories, generated from registry/*.toml.",
+  "version": "0.1.0",
+  "skills": "./skills"
+}

@@ -1,0 +1,23 @@
+[package]
+name = "openacte-skill"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Generate the OpenActe agent skill from registry/*.toml"
+license = "MIT"
+publish = false
+
+[lib]
+name = "openacte_skill"
+path = "src/lib.rs"
+
+[[bin]]
+name = "openacte-skill"
+path = "src/main.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+
+[dev-dependencies]
+tempfile = "3"

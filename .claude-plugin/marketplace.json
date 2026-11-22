@@ -1,0 +1,7 @@
+{
+  "name": "openacte",
+  "owner": { "name": "OpenActe" },
+  "plugins": [
+    { "name": "openacte", "source": "./", "description": "Catalogue of the OpenActe repositories." }
+  ]
+}

@@ -159,3 +159,15 @@ lines. The format is in [`registry/README.md`](registry/README.md).
 | [`actserve`](registry/actserve.toml) | service | Actserve est un orchestrateur universel en Rust conçu pour l'administration intégrale de s |
 | [`actsessions`](registry/actsessions.toml) | cli | Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigravity, Aider, |
 | [`acttex`](registry/acttex.toml) | cli | Build a LaTeX project: find its main file, run pdflatex / biber / makeglossaries. |
+
+## Use the repositories from an agent
+
+`skills/openacte/SKILL.md` is a skill (Agent Skills format) that lists every
+repository of the registry with its role, binary and address. Claude Code,
+Codex and any agent that reads skills can load it.
+
+- Claude Code: `/plugin marketplace add OpenActe/openacte`, then
+  `/plugin install openacte@openacte`.
+- Other agents: copy or link `skills/openacte/` into the agent's skills folder.
+- The skill is generated from `registry/*.toml`: after changing the registry run
+  `cargo run`; CI runs `cargo run -- --check`.
