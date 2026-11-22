@@ -3,7 +3,7 @@ directory = "actesskey"
 repository = "https://github.com/grosjeanbaptiste/actesskey"
 kind = "cli"
 binary = "actesskey"
-role = "Secrets, keys and passwords of the machine, in one place. Will replace the secret handling of `dotfiles`."
+role = "Secrets, keys and passwords of the machine, in one place. It is replacing the secret handling of `dotfiles`."
 readme = "actesskey/README.md"
 usage = [
   "actesskey init | remove <name> | verify | recipient add <age1…> [--label L] | recipient list | recipient remove <age1…> | rekey | backup-key <file> | restore-key <file> | github <name> <owner/repo> [--as SECRET] | push [name] | target <name> <path> [--mode M] | apply [name] | add <name> [--replace] | add-pair <name> p12|ssh <file> [--replace] | import <dir> --identity <file> | get <name> | list [--age] [--expiring]",

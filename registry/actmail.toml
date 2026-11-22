@@ -1,10 +1,10 @@
 name = "actmail"
 directory = "actmail"
 repository = "https://github.com/grosjeanbaptiste/actmail"
-kind = "scaffold"
+kind = "cli"
 binary = "actmail"
-role = "Read-only search over every mailbox listed in the `dotfiles mail` manifest."
+role = "Read-only search over every mailbox listed in the `dotfiles mail` manifest, over IMAP or from the archived Maildirs."
 readme = "actmail/README.md"
 usage = [
-  "actmail --since YYYY-MM-DD [account...]",
+  "actmail --since YYYY-MM-DD [account...] [--subject TEXT [--save DIR] [--export DIR]]",
 ]

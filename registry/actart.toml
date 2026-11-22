@@ -1,7 +1,7 @@
 name = "actart"
 directory = "actart"
 repository = "https://github.com/grosjeanbaptiste/actart"
-kind = "scaffold"
+kind = "service"
 binary = "actart-api"
 role = "Legal reasoning engine, Belgian law first: from a need or a file, find the applicable texts, reason about how they apply, answer with citations. Orchestrates specialised repositories (one per legal domain), consumed by tag or rev."
 readme = "actart/README.md"
