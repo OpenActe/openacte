@@ -1,0 +1,6 @@
+name = "actdock"
+directory = "actdock"
+repository = "https://github.com/grosjeanbaptiste/actdock"
+kind = "scaffold"
+role = "unknown: the README and CONTEXT.md carry no description yet"
+readme = "actdock/README.md"

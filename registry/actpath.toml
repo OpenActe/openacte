@@ -1,0 +1,9 @@
+name = "actpath"
+directory = "actpath"
+repository = "https://github.com/grosjeanbaptiste/actpath"
+kind = "library"
+role = "Everything about paths: rewriting the references to a renamed repository, moves, worktree repair, cargo install records (ADR 0001). Today only the first is built."
+readme = "actpath/README.md"
+usage = [
+  "actpath::realign::{for_repo, replace, replace_words, encoded}",
+]

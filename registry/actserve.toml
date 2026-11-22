@@ -1,0 +1,7 @@
+name = "actserve"
+directory = "actserve"
+repository = "https://github.com/grosjeanbaptiste/actserve"
+kind = "service"
+binary = "actserve"
+role = "Actserve est un orchestrateur universel en Rust conçu pour l'administration intégrale de serveurs. Il unifie l'ensemble de la chaîne de valeur système et cloud : noms de domaine (Registrars), zones et enregistrements DNS, délivrance de certificats TLS/SSL Let's Encrypt, tunnels VPN WireGuard, moteurs d'automatisation déclarative (OpenTofu, Ansible, Crossplane), et réutilisation maximale de dépôts d'administration existants (Ansible Galaxy, LinuxServer.io, collections GitHub Sysadmin & Homelab)."
+readme = "actserve/README.md"

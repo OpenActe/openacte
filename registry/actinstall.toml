@@ -1,0 +1,11 @@
+name = "actinstall"
+directory = "actinstall"
+repository = "https://github.com/grosjeanbaptiste/actinstall"
+kind = "cli"
+binary = "actinstall"
+role = "Keeps the cargo-installed binaries of local repositories at their repository's latest version."
+readme = "actinstall/README.md"
+usage = [
+  "actinstall update",
+  "actinstall list",
+]

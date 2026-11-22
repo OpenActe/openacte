@@ -1,0 +1,11 @@
+name = "actit"
+directory = "Actit"
+repository = "https://github.com/grosjeanbaptiste/Actit"
+kind = "cli"
+binary = "actit"
+role = "Does a tool already exist for this need? Actit answers from indexer (the catalogue of packages) and kag (reads their documentation, cites sources). It uses no other search engine and no LLM."
+readme = "Actit/README.md"
+usage = [
+  "actit --name <repo> [--owner <owner> | --contains]",
+  "actit \"<need>\"",
+]

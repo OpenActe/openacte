@@ -1,0 +1,10 @@
+name = "actparc"
+directory = "actparc"
+repository = "https://github.com/grosjeanbaptiste/actparc"
+kind = "cli"
+binary = "actparc"
+role = "Manages the configuration of a fleet: machines, volumes and servers. Today it only lists the Stow packages of a machine."
+readme = "actparc/README.md"
+usage = [
+  "actparc packages",
+]

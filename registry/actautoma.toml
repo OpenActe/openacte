@@ -1,0 +1,10 @@
+name = "actautoma"
+directory = "actautoma"
+repository = "https://github.com/grosjeanbaptiste/actautoma"
+kind = "cli"
+binary = "actautoma"
+role = "Rust library that handles the tools of repository-hosting platforms (`gh` for GitHub, `glab` for GitLab, and others). The `gh` adapter exists; this README states what exists today and grows with the API."
+readme = "actautoma/README.md"
+usage = [
+  "actautoma rename-repo OWNER/OLD NEW [--dir OLD_DIR] [--root DIR]... [--children DIR]... [--registry FILE] [--bin-dir DIR] [--into DIR] [--local-only] [--dry-run]",
+]

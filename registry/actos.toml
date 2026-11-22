@@ -1,0 +1,10 @@
+name = "actos"
+directory = "actos"
+repository = "https://github.com/grosjeanbaptiste/actos"
+kind = "cli"
+binary = "actos"
+role = "`actos` is one app to administer a machine: its hardware components, its inputs and outputs (network and physical ports), and its bytes (files, archives, duplicates — handled with the dedicated"
+readme = "actos/README.md"
+usage = [
+  "actos <command>; commands listed by `actos --help`",
+]

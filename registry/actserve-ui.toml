@@ -1,0 +1,7 @@
+name = "actserve-ui"
+directory = "actserve-ui"
+repository = "https://github.com/grosjeanbaptiste/actserve-ui"
+kind = "app"
+binary = "actserve-ui"
+role = "A Dioxus app on [bioxus](https://github.com/grosjeanbaptiste/bioxus): one crate for web, desktop, tablet and phone."
+readme = "actserve-ui/README.md"

@@ -1,0 +1,6 @@
+name = "actrack"
+directory = "actrack"
+repository = "https://github.com/grosjeanbaptiste/actrack"
+kind = "workspace"
+role = "Workspace parent du projet Actrack — prédiction de la Coupe du Monde FIFA 2026. Il regroupe des sous-projets qui sont chacun leur propre dépôt git (non imbriqués : ce dépôt racine les ignore via `.gitignore`)."
+readme = "actrack/README.md"
