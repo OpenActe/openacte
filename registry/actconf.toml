@@ -1,7 +1,10 @@
 name = "actconf"
 directory = "actconf"
 repository = "https://github.com/grosjeanbaptiste/actconf"
-kind = "unverified"
+kind = "cli"
 binary = "actconf"
-role = "unknown: the README carries no description yet (template placeholder)"
+role = "Manages the configuration of a fleet: machines, volumes and servers. Today it only lists the Stow packages of a machine."
 readme = "actconf/README.md"
+usage = [
+  "actconf packages",
+]
