@@ -1,0 +1,7 @@
+name = "actname"
+directory = "Actname"
+repository = "https://github.com/grosjeanbaptiste/Actname"
+kind = "cli"
+binary = "actname"
+role = "Actname is a deterministic, offline-first semantic naming engine written in Rust."
+readme = "Actname/README.md"

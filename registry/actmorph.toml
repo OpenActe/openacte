@@ -1,0 +1,15 @@
+name = "actmorph"
+directory = "Actmorph"
+repository = "https://github.com/grosjeanbaptiste/Actmorph"
+kind = "cli"
+binary = "actmorph"
+role = "Actmorph is a Rust project for managing files of every type. Generic catalog and file operations do not depend on media or extension recognition; format-aware metadata is an optional enrichment."
+readme = "Actmorph/README.md"
+usage = [
+  "actmorph scan <library>",
+  "actmorph list <library>",
+  "actmorph search <library> <text>",
+  "actmorph copy <source> <destination>",
+  "actmorph archive create <file-or-directory> <archive.zip|tar|7z> | verify <source> <archive> | extract <archive.zip|tar|7z|rar> <new-directory> | remove-verified-source <file-or-directory> <archive> --yes",
+  "actmorph move|rename <source> <destination>",
+]

@@ -1,0 +1,12 @@
+name = "actcast"
+directory = "actcast"
+kind = "cli"
+binary = "actcast"
+role = "Actcast est l'orchestrateur de la stack multimédia et de téléchargement de l'écosystème Acteble."
+readme = "actcast/README.md"
+usage = [
+  "actcast status|start|stop [--manifest <file>] [service...]",
+  "actcast sync --config <file>",
+  "actcast index [--dotfiles <binary>] [--out <directory>]",
+  "actcast serve --bind <address> --config <file>",
+]

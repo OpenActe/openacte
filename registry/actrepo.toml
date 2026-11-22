@@ -1,0 +1,10 @@
+name = "actrepo"
+directory = "actrepo"
+repository = "https://github.com/grosjeanbaptiste/actrepo"
+kind = "cli"
+binary = "actrepo"
+role = "Manages git repositories by reusing what exists: scaffolding, checking, renaming, workspaces, pull requests, install."
+readme = "actrepo/README.md"
+usage = [
+  "actrepo <command>; commands listed by `actrepo --help`",
+]

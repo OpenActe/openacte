@@ -120,3 +120,37 @@ Our long-term objective is to advance digital autonomy through open engineering,
 ---
 
 **OpenActe — Open foundations for autonomous systems.**# openacte
+
+## Repositories
+
+Each tool has one file in [`registry/`](registry/): binary, role, command
+lines. The format is in [`registry/README.md`](registry/README.md).
+
+| Tool | Kind | Role |
+|---|---|---|
+| [`actart`](registry/actart.toml) | scaffold | Legal reasoning engine, Belgian law first: from a need or a file, find the applicable text |
+| [`actautoma`](registry/actautoma.toml) | cli | Rust library that handles the tools of repository-hosting platforms (`gh` for GitHub, `gla |
+| [`actcast`](registry/actcast.toml) | cli | Actcast est l'orchestrateur de la stack multimédia et de téléchargement de l'écosystème Ac |
+| [`actcdi`](registry/actcdi.toml) | scaffold | Executes CI/CD: runs the gates (lint, tests, builds), shards them and selects what to run, |
+| [`actdevice`](registry/actdevice.toml) | unverified | Run or install an app (Flutter, Dioxus, or any project with a `scripts/device-install.sh`  |
+| [`actdock`](registry/actdock.toml) | scaffold | unknown: the README and CONTEXT.md carry no description yet |
+| [`actedu`](registry/actedu.toml) | service | Cartographie unifiée des cursus d'enseignement supérieur et du graphe des savoirs académiq |
+| [`actempo`](registry/actempo.toml) | cli | Scheduler of acts for agentic sessions: given acts (units of agent work with dependencies, |
+| [`actesskey`](registry/actesskey.toml) | cli | Secrets, keys and passwords of the machine, in one place. Will replace the secret handling |
+| [`actinstall`](registry/actinstall.toml) | cli | Keeps the cargo-installed binaries of local repositories at their repository's latest vers |
+| [`actit`](registry/actit.toml) | cli | Does a tool already exist for this need? Actit answers from indexer (the catalogue of pack |
+| [`actlimit`](registry/actlimit.toml) | cli | Shows the usage limits of the coding agents (Claude, Codex, and the agents with a token bu |
+| [`actmail`](registry/actmail.toml) | scaffold | Read-only search over every mailbox listed in the `dotfiles mail` manifest. |
+| [`actmake`](registry/actmake.toml) | library | Turn a project into its artifact. One verb, `build`; the engine is chosen by the caller. |
+| [`actmorph`](registry/actmorph.toml) | cli | Actmorph is a Rust project for managing files of every type. Generic catalog and file oper |
+| [`actname`](registry/actname.toml) | cli | Actname is a deterministic, offline-first semantic naming engine written in Rust. |
+| [`actos`](registry/actos.toml) | cli | `actos` is one app to administer a machine: its hardware components, its inputs and output |
+| [`actparc`](registry/actparc.toml) | cli | Manages the configuration of a fleet: machines, volumes and servers. Today it only lists t |
+| [`actpath`](registry/actpath.toml) | library | Everything about paths: rewriting the references to a renamed repository, moves, worktree  |
+| [`actqueue`](registry/actqueue.toml) | cli | Manages queues of jobs (the heavy queue and its lanes), working in pair with actempo. |
+| [`actrack`](registry/actrack.toml) | workspace | Workspace parent du projet Actrack — prédiction de la Coupe du Monde FIFA 2026. Il regroup |
+| [`actrepo`](registry/actrepo.toml) | cli | Manages git repositories by reusing what exists: scaffolding, checking, renaming, workspac |
+| [`actserve-ui`](registry/actserve-ui.toml) | app | A Dioxus app on [bioxus](https://github.com/grosjeanbaptiste/bioxus): one crate for web, d |
+| [`actserve`](registry/actserve.toml) | service | Actserve est un orchestrateur universel en Rust conçu pour l'administration intégrale de s |
+| [`actsessions`](registry/actsessions.toml) | cli | Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigravity, Aider, |
+| [`acttex`](registry/acttex.toml) | cli | Build a LaTeX project: find its main file, run pdflatex / biber / makeglossaries. |

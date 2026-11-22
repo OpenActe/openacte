@@ -1,0 +1,15 @@
+name = "actsessions"
+directory = "actsessions"
+repository = "https://github.com/grosjeanbaptiste/actsessions"
+kind = "cli"
+binary = "actsessions"
+role = "Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigravity, Aider, etc.) sur une machine locale."
+readme = "actsessions/README.md"
+usage = [
+  "actsessions list [--json]",
+  "actsessions live",
+  "actsessions inspect <session-id> [--json]",
+  "actsessions orphans",
+  "actsessions clean [--kill]",
+  "actsessions stop <session-id>",
+]

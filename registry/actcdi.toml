@@ -1,0 +1,6 @@
+name = "actcdi"
+directory = "actcdi"
+repository = "https://github.com/grosjeanbaptiste/actcdi"
+kind = "scaffold"
+role = "Executes CI/CD: runs the gates (lint, tests, builds), shards them and selects what to run, for every repository."
+readme = "actcdi/README.md"

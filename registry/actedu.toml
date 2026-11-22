@@ -1,0 +1,6 @@
+name = "actedu"
+directory = "actedu"
+repository = "https://github.com/grosjeanbaptiste/actedu"
+kind = "service"
+role = "Cartographie unifiée des cursus d'enseignement supérieur et du graphe des savoirs académiques."
+readme = "actedu/README.md"

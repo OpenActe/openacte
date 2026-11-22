@@ -1,0 +1,6 @@
+name = "actdevice"
+directory = "actdevice"
+repository = "https://github.com/grosjeanbaptiste/actdevice"
+kind = "unverified"
+role = "Run or install an app (Flutter, Dioxus, or any project with a `scripts/device-install.sh` hook) on an iOS simulator, an Android device or the host."
+readme = "actdevice/README.md"
