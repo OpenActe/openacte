@@ -1,0 +1,7 @@
+name = "actconf"
+directory = "actconf"
+repository = "https://github.com/grosjeanbaptiste/actconf"
+kind = "unverified"
+binary = "actconf"
+role = "unknown: the README carries no description yet (template placeholder)"
+readme = "actconf/README.md"
