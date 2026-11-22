@@ -5,3 +5,7 @@ kind = "cli"
 binary = "actname"
 role = "Actname is a deterministic, offline-first semantic naming engine written in Rust."
 readme = "Actname/README.md"
+usage = [
+  "actname generate --prefix <p>... [--domain \"<words>\"] [--readme <file>] [--max-length n] [--limit n] [--strategy hybrid|composed|coined] [--exclude <name>]... [--format text|json]",
+  "actname --help",
+]
