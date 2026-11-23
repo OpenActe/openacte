@@ -1,0 +1,10 @@
+name = "baba"
+directory = "baba"
+repository = "https://github.com/grosjeanbaptiste/baba"
+kind = "cli"
+binary = "baba"
+role = "A shell-like CLI you talk to in (controlled) English, powered by pure symbolic AI, with no LLM in the loop."
+readme = "baba/README.md"
+usage = [
+  "baba \"<request in controlled English>\"",
+]

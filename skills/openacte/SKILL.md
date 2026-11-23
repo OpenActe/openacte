@@ -193,6 +193,41 @@ Build a LaTeX project: find its main file, run pdflatex / biber / makeglossaries
 - usage: `acttex <initial|compile|rebuild> [main.tex]`
 - directory: `acttex`
 
+### actusext (cli)
+
+Usage limits of every coding agent (Claude Code, Codex, Gemini, ...): what is left of the week, and a plan that fits it.
+
+- repository: https://github.com/grosjeanbaptiste/actusext
+- binary: `actusext`
+- usage: `actusext codex`
+- usage: `actusext claude`
+- usage: `actusext <agent> profile [--days N]`
+- usage: `actusext <agent> daily|models|projects|sessions [--days N]`
+- usage: `actusext claude guard [--days N] [--threshold TOKENS] [--min-requests N]`
+- usage: `actusext line <agent>`
+- usage: `actusext recommend <project> [--days N]`
+- usage: `actusext plan --forecast FILE --roadmap FILE --today YYYY-MM-DD`
+- directory: `actusext`
+
+### baba (cli)
+
+A shell-like CLI you talk to in (controlled) English, powered by pure symbolic AI, with no LLM in the loop.
+
+- repository: https://github.com/grosjeanbaptiste/baba
+- binary: `baba`
+- usage: `baba "<request in controlled English>"`
+- directory: `baba`
+
+### openacte (cli)
+
+Generate the OpenActe agent skill from registry/*.toml: the catalogue of every repository in this folder.
+
+- repository: https://github.com/OpenActe/openacte
+- binary: `openacte-skill`
+- usage: `openacte-skill`
+- usage: `openacte-skill --check`
+- directory: `openacte`
+
 ### actart (service)
 
 Legal reasoning engine, Belgian law first: from a need or a file, find the applicable texts, reason about how they apply, answer with citations. Orchestrates specialised repositories (one per legal domain), consumed by tag or rev.
@@ -207,6 +242,14 @@ Cartographie unifiée des cursus d'enseignement supérieur et du graphe des savo
 
 - repository: https://github.com/grosjeanbaptiste/actedu
 - directory: `actedu`
+
+### actindexer (service)
+
+Index of external data sources (knowledge bases, event providers, third-party services, datasets) and of chosen books and software packages, in one format, for any project. One TOML file per source, validated by Rust, rendered to JSON and served as a public read API at https://indexer.acteble.workers.dev.
+
+- repository: https://github.com/grosjeanbaptiste/actindexer
+- binary: `actindexer`
+- directory: `actindexer`
 
 ### actserve (service)
 
@@ -223,6 +266,13 @@ Administration interface of [actserve](../actserve): servers, domains and DNS, W
 - repository: https://github.com/grosjeanbaptiste/actserve-ui
 - binary: `actserve-ui`
 - directory: `actserve-ui`
+
+### actessh (library)
+
+SSH client. Keys and passwords come from actesskey.
+
+- repository: https://github.com/grosjeanbaptiste/actessh
+- directory: `actessh`
 
 ### actmake (library)
 
@@ -253,6 +303,14 @@ unknown: the README and CONTEXT.md carry no description yet
 
 - repository: https://github.com/grosjeanbaptiste/actdock
 - directory: `actdock`
+
+### acteag (workspace)
+
+A purely algorithmic, domain-agnostic framework for benchmarking Retrieval-Augmented Generation pipelines, organized around a taxonomy of interchangeable components. Every pipeline stage and every evaluation metric is one algorithm among a family, selected by label and swappable without touching the rest.
+
+- repository: https://github.com/grosjeanbaptiste/acteag
+- binary: `acteag`
+- directory: `acteag`
 
 ### actrack (workspace)
 

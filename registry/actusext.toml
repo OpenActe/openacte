@@ -1,0 +1,17 @@
+name = "actusext"
+directory = "actusext"
+repository = "https://github.com/grosjeanbaptiste/actusext"
+kind = "cli"
+binary = "actusext"
+role = "Usage limits of every coding agent (Claude Code, Codex, Gemini, ...): what is left of the week, and a plan that fits it."
+readme = "actusext/README.md"
+usage = [
+  "actusext codex",
+  "actusext claude",
+  "actusext <agent> profile [--days N]",
+  "actusext <agent> daily|models|projects|sessions [--days N]",
+  "actusext claude guard [--days N] [--threshold TOKENS] [--min-requests N]",
+  "actusext line <agent>",
+  "actusext recommend <project> [--days N]",
+  "actusext plan --forecast FILE --roadmap FILE --today YYYY-MM-DD",
+]

@@ -1,0 +1,7 @@
+name = "actindexer"
+directory = "actindexer"
+repository = "https://github.com/grosjeanbaptiste/actindexer"
+kind = "service"
+binary = "actindexer"
+role = "Index of external data sources (knowledge bases, event providers, third-party services, datasets) and of chosen books and software packages, in one format, for any project. One TOML file per source, validated by Rust, rendered to JSON and served as a public read API at https://indexer.acteble.workers.dev."
+readme = "actindexer/README.md"

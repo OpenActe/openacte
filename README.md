@@ -141,7 +141,11 @@ lines. The format is in [`registry/README.md`](registry/README.md).
 | [`actdock`](registry/actdock.toml) | scaffold | unknown: the README and CONTEXT.md carry no description yet |
 | [`actedu`](registry/actedu.toml) | service | Cartographie unifiée des cursus d'enseignement supérieur et du graphe des savoirs académiq |
 | [`actempo`](registry/actempo.toml) | cli | Scheduler of acts for agentic sessions: given acts (units of agent work with dependencies, |
+| [`baba`](registry/baba.toml) | cli | A shell-like CLI you talk to in (controlled) English, powered by pure symbolic AI, with no |
+| [`acteag`](registry/acteag.toml) | workspace | A purely algorithmic, domain-agnostic framework for benchmarking Retrieval-Augmented Gener |
 | [`actesskey`](registry/actesskey.toml) | cli | Secrets, keys and passwords of the machine, in one place. It is replacing the secret handling |
+| [`actindexer`](registry/actindexer.toml) | service | Index of external data sources and of chosen books and software packages, one TOML file pe |
+| [`actessh`](registry/actessh.toml) | library | SSH client. Keys and passwords come from actesskey. |
 | [`actinstall`](registry/actinstall.toml) | cli | Keeps the cargo-installed binaries of local repositories at their repository's latest vers |
 | [`actit`](registry/actit.toml) | cli | Does a tool already exist for this need? Actit answers from indexer (the catalogue of pack |
 | [`actlimit`](registry/actlimit.toml) | cli | Shows the usage limits of the coding agents (Claude, Codex, and the agents with a token bu |
@@ -158,6 +162,8 @@ lines. The format is in [`registry/README.md`](registry/README.md).
 | [`actserve-ui`](registry/actserve-ui.toml) | app | Administration interface of [actserve](../actserve): servers, domains and DNS, WireGuard, o |
 | [`actserve`](registry/actserve.toml) | service | Actserve est un orchestrateur universel en Rust conçu pour l'administration intégrale de s |
 | [`actsessions`](registry/actsessions.toml) | cli | Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigravity, Aider, |
+| [`actusext`](registry/actusext.toml) | cli | Usage limits of every coding agent (Claude Code, Codex, Gemini, ...): what is left of the  |
+| [`openacte`](registry/openacte.toml) | cli | Generate the OpenActe agent skill from registry/*.toml: the catalogue of every repository  |
 | [`acttex`](registry/acttex.toml) | cli | Build a LaTeX project: find its main file, run pdflatex / biber / makeglossaries. |
 
 ## Use the repositories from an agent

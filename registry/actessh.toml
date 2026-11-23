@@ -1,0 +1,6 @@
+name = "actessh"
+directory = "actessh"
+repository = "https://github.com/grosjeanbaptiste/actessh"
+kind = "library"
+role = "SSH client. Keys and passwords come from actesskey."
+readme = "actessh/README.md"

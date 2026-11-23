@@ -1,0 +1,11 @@
+name = "openacte"
+directory = "openacte"
+repository = "https://github.com/OpenActe/openacte"
+kind = "cli"
+binary = "openacte-skill"
+role = "Generate the OpenActe agent skill from registry/*.toml: the catalogue of every repository in this folder."
+readme = "openacte/README.md"
+usage = [
+  "openacte-skill",
+  "openacte-skill --check",
+]
