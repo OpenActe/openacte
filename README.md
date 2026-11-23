@@ -6,6 +6,30 @@ OpenActe is an open-source organization dedicated to the research, design, devel
 
 Our mission is to build reusable technological foundations that promote transparency, decentralization, interoperability and long-term sustainability.
 
+## Contents
+
+- [How it works](#how-it-works)
+- [Philosophy](#philosophy)
+- [Engineering Principles](#engineering-principles)
+- [Research & Development](#research--development)
+- [Technology Stack](#technology-stack)
+- [Development Standards](#development-standards)
+- [Open Source & Licensing](#open-source--licensing)
+- [Contributing](#contributing)
+- [Vision](#vision)
+- [Repositories](#repositories)
+- [Use the repositories from an agent](#use-the-repositories-from-an-agent)
+
+## How it works
+
+```mermaid
+flowchart LR
+    subgraph openacte["openacte"]
+        registry["registry/"]
+        skills["skills/"]
+    end
+```
+
 ## Philosophy
 
 We believe software should be:
