@@ -297,12 +297,12 @@ Executes CI/CD: runs the gates (lint, tests, builds), shards them and selects wh
 - repository: https://github.com/grosjeanbaptiste/actcdi
 - directory: `actcdi`
 
-### actdock (scaffold)
+### actstack (scaffold)
 
-unknown: the README and CONTEXT.md carry no description yet
+technology stack of a project: databases, containers, services (intent, nothing built yet)
 
-- repository: https://github.com/grosjeanbaptiste/actdock
-- directory: `actdock`
+- repository: https://github.com/grosjeanbaptiste/actstack
+- directory: `actstack`
 
 ### acteag (workspace)
 

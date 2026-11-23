@@ -1,0 +1,6 @@
+name = "actstack"
+directory = "actstack"
+repository = "https://github.com/grosjeanbaptiste/actstack"
+kind = "scaffold"
+role = "technology stack of a project: databases, containers, services (intent, nothing built yet)"
+readme = "actstack/README.md"

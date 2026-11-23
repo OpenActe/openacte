@@ -162,7 +162,7 @@ lines. The format is in [`registry/README.md`](registry/README.md).
 | [`actcdi`](registry/actcdi.toml) | scaffold | Executes CI/CD: runs the gates (lint, tests, builds), shards them and selects what to run, |
 | [`actdevice`](registry/actdevice.toml) | unverified | Run or install an app (Flutter, Dioxus, or any project with a `scripts/device-install.sh`  |
 | [`actconf`](registry/actconf.toml) | cli | Manages the configuration of a fleet: machines, volumes and servers. Today it only lists the Stow packages of a machine. |
-| [`actdock`](registry/actdock.toml) | scaffold | unknown: the README and CONTEXT.md carry no description yet |
+| [`actstack`](registry/actstack.toml) | scaffold | technology stack of a project: databases, containers, services (intent, nothing built yet) |
 | [`actedu`](registry/actedu.toml) | service | Cartographie unifiée des cursus d'enseignement supérieur et du graphe des savoirs académiq |
 | [`actempo`](registry/actempo.toml) | cli | Scheduler of acts for agentic sessions: given acts (units of agent work with dependencies, |
 | [`baba`](registry/baba.toml) | cli | A shell-like CLI you talk to in (controlled) English, powered by pure symbolic AI, with no |
