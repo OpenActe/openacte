@@ -1,0 +1,11 @@
+name: skill
+on: [push, pull_request]
+jobs:
+  skill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo fmt --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo run -- --check
+      - run: cargo test
