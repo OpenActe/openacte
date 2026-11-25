@@ -3,7 +3,7 @@ directory = "Actmorph"
 repository = "https://github.com/grosjeanbaptiste/Actmorph"
 kind = "cli"
 binary = "actmorph"
-role = "Files of every type: a generic catalog and file operations, archives included, that do not depend on media or extension recognition; format-aware metadata is an optional enrichment."
+role = "Files of every type: a generic catalog and file operations, archives included, that do not depend on media or extension recognition; format-aware metadata is an optional enrichment. Does not orchestrate workflows nor carry media-specific meaning (actcast), per ecosystem.md."
 readme = "Actmorph/README.md"
 usage = [
   "actmorph scan <library>",

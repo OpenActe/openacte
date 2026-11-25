@@ -35,7 +35,7 @@ Workflows that chain several git and gh verbs, plus the gh adapter: ship (push, 
 
 ### actcast (cli)
 
-Orchestrator of the media and download stack (arr applications, torrent clients, indexers), outside dotfiles: start, stop and health of the services, reactive triggers on indexer changes, declarative wanted films, series, music and books with Recyclarr quality profiles, offline TSV inventory of the local libraries.
+Orchestrator of the media and download stack (arr applications, torrent clients, indexers), outside dotfiles: start, stop and health of the services, reactive triggers on indexer changes, declarative wanted films, series, music and books with Recyclarr quality profiles, offline TSV inventory of the local libraries. Limits not documented in its README.
 
 - repository: no remote registered
 - binary: `actcast`
@@ -118,7 +118,7 @@ Read-only search over every mailbox listed in the `dotfiles mail` manifest, over
 
 ### actmorph (cli)
 
-Files of every type: a generic catalog and file operations, archives included, that do not depend on media or extension recognition; format-aware metadata is an optional enrichment.
+Files of every type: a generic catalog and file operations, archives included, that do not depend on media or extension recognition; format-aware metadata is an optional enrichment. Does not orchestrate workflows nor carry media-specific meaning (actcast), per ecosystem.md.
 
 - repository: https://github.com/grosjeanbaptiste/Actmorph
 - binary: `actmorph`
@@ -269,7 +269,7 @@ Universal Rust orchestrator for the administration of remote servers: domain nam
 
 ### actserve-ui (app)
 
-Administration interface of [actserve](../actserve): servers, domains and DNS, WireGuard, orchestrations and workflows, ecosystem presets. A Dioxus app, one crate for web, desktop, tablet and phone.
+Administration interface of [actserve](../actserve): servers, domains and DNS, WireGuard, orchestrations and workflows, ecosystem presets. A Dioxus app, one crate for web, desktop, tablet and phone. Does not hold backend logic (actserve).
 
 - repository: https://github.com/grosjeanbaptiste/actserve-ui
 - binary: `actserve-ui`
@@ -277,7 +277,7 @@ Administration interface of [actserve](../actserve): servers, domains and DNS, W
 
 ### actcook (library)
 
-Knowledge of food and cooking, the actedu equivalent for ingredients and cuisine. Today an ingredient database stored as XML and validated by an XSD schema; amounts per 100 g of edible part, kept per source so provenance is never lost.
+Knowledge of food and cooking, the actedu equivalent for ingredients and cuisine. Today an ingredient database stored as XML and validated by an XSD schema; amounts per 100 g of edible part, kept per source so provenance is never lost. Limits not documented in its README.
 
 - repository: https://github.com/grosjeanbaptiste/actcook
 - directory: `actcook`
@@ -336,7 +336,7 @@ Knowledge of football and the FIFA World Cup 2026 prediction project, the actedu
 
 ### actcorpus (unverified)
 
-Store of knowledge: courses, worked solutions and converted documents (Polytech first), with the Rust chain that mirrors Moodle documents to Drive and checks them. Its README still describes only the fluid-mechanics worked solution.
+Store of knowledge: courses, worked solutions and converted documents (Polytech first), with the Rust chain that mirrors Moodle documents to Drive and checks them. Its README still describes only the fluid-mechanics worked solution. Limits not documented in its README.
 
 - repository: https://github.com/grosjeanbaptiste/actcorpus
 - directory: `actcorpus`

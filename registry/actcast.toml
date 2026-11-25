@@ -2,7 +2,7 @@ name = "actcast"
 directory = "actcast"
 kind = "cli"
 binary = "actcast"
-role = "Orchestrator of the media and download stack (arr applications, torrent clients, indexers), outside dotfiles: start, stop and health of the services, reactive triggers on indexer changes, declarative wanted films, series, music and books with Recyclarr quality profiles, offline TSV inventory of the local libraries."
+role = "Orchestrator of the media and download stack (arr applications, torrent clients, indexers), outside dotfiles: start, stop and health of the services, reactive triggers on indexer changes, declarative wanted films, series, music and books with Recyclarr quality profiles, offline TSV inventory of the local libraries. Limits not documented in its README."
 readme = "actcast/README.md"
 usage = [
   "actcast status|start|stop [--manifest <file>] [service...]",
