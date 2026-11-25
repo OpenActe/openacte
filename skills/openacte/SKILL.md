@@ -16,6 +16,12 @@ hand; change the registry and regenerate.
 4. Binary not installed: `cargo install --locked --git <repository>`; with a checkout, `actinstall update` keeps installed binaries current.
 5. Each tool lists its commands with `<binary> --help`: trust that over this page.
 
+## When no repository does the job
+
+- A feature is missing from the repository that owns the responsibility: add it to that repository (ROADMAP and ADR first, then tests, then code). Do not work around it with a script, a copy or a shell function elsewhere.
+- No repository owns the responsibility: create a new repository for it, with a `registry/<name>.toml` entry here, then regenerate this page. Do not park the responsibility in the nearest repository.
+- Two repositories claim the same role: say so and settle the owner before adding anything.
+
 ## Repositories
 
 ### actautoma (cli)
