@@ -3,7 +3,7 @@ directory = "actempo"
 repository = "https://github.com/grosjeanbaptiste/actempo"
 kind = "cli"
 binary = "actempo"
-role = "Scheduler of acts for agentic sessions: given acts (units of agent work with dependencies, priority, deadline, release time, allowed providers, token cost) and sessions (each of a provider, one act at a time, providers with a token budget), it returns a plan: which act runs on which session, when, and which acts could not be placed and why. Nothing is dropped silently."
+role = "Scheduler of acts for agentic sessions: given acts (dependencies, priority, deadline, release time, allowed providers, token cost) and sessions, returns a plan saying which act runs on which session and when, and which acts could not be placed and why. Secondary: a slot-based agenda schedule. Does not execute the acts (actserve, actqueue) nor measure token budgets (actusext)."
 readme = "actempo/README.md"
 usage = [
   "actempo lock RESOURCE... --owner NAME [--shared] [--locks DIR]",

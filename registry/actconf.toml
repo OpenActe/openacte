@@ -3,7 +3,7 @@ directory = "actconf"
 repository = "https://github.com/grosjeanbaptiste/actconf"
 kind = "cli"
 binary = "actconf"
-role = "Manages the configuration of a fleet: machines, volumes and servers. Today it only lists the Stow packages of a machine."
+role = "Configuration of a machine and its fleet, extracted from dotfiles slice by slice. Today it only lists the Stow packages of a machine. The inventory of what exists (volumes, servers) is actparc."
 readme = "actconf/README.md"
 usage = [
   "actconf packages",

@@ -2,7 +2,7 @@ name = "actmake"
 directory = "actmake"
 repository = "https://github.com/grosjeanbaptiste/actmake"
 kind = "library"
-role = "Turn a project into its artifact. One verb, `build`; the engine is chosen by the caller."
+role = "Turns a project into its artifact with one verb, build; the caller picks the engine: Tex (through acttex), Html, Markdown, Cargo, Dioxus, Flutter. Does not detect the project kind (actrepo does)."
 readme = "actmake/README.md"
 usage = [
   "actmake::build(&System, dir, Engine, &Options)",

@@ -3,7 +3,7 @@ directory = "Actname"
 repository = "https://github.com/grosjeanbaptiste/Actname"
 kind = "cli"
 binary = "actname"
-role = "Actname is a deterministic, offline-first semantic naming engine written in Rust."
+role = "Deterministic, offline semantic naming engine: generates names with strategies and JSON output, no network, no LLM. actrepo uses it to name a repository. Does not check that a name is free (actit does)."
 readme = "Actname/README.md"
 usage = [
   "actname generate --prefix <p>... [--domain \"<words>\"] [--readme <file>] [--max-length n] [--limit n] [--strategy hybrid|composed|coined] [--exclude <name>]... [--format text|json]",

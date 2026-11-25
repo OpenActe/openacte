@@ -3,8 +3,10 @@ directory = "actparc"
 repository = "https://github.com/grosjeanbaptiste/actparc"
 kind = "cli"
 binary = "actparc"
-role = "Manages the configuration of a fleet: machines, volumes and servers. Today it only lists the Stow packages of a machine."
+role = "Inventory of the fleet: which machines, volumes, servers and packages exist and what each storage volume holds (indexed by UUID). Records and reads that state; it does not operate servers (actserve) nor install software (actinstall)."
 readme = "actparc/README.md"
 usage = [
   "actparc packages",
+  "actparc scan PATH...",
+  "actparc scan --all",
 ]

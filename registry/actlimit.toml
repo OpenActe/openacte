@@ -3,7 +3,7 @@ directory = "actlimit"
 repository = "https://github.com/grosjeanbaptiste/actlimit"
 kind = "cli"
 binary = "actlimit"
-role = "Shows the usage limits of the coding agents (Claude, Codex, and the agents with a token budget) as one line each, fast enough for a shell prompt."
+role = "Shows the current usage limits of the coding agents (Claude, Codex, agents with a token budget) as one line each, fast enough for a shell prompt. Does not forecast or plan the week (actusext)."
 readme = "actlimit/README.md"
 usage = [
   "actlimit refresh [agent...]",

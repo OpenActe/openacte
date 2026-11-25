@@ -3,7 +3,7 @@ directory = "acttex"
 repository = "https://github.com/grosjeanbaptiste/acttex"
 kind = "cli"
 binary = "acttex"
-role = "Build a LaTeX project: find its main file, run pdflatex / biber / makeglossaries."
+role = "LaTeX engine: finds the main .tex file and runs pdflatex, biber and makeglossaries (initial, compile, rebuild). Does not choose between project kinds (actmake calls it)."
 readme = "acttex/README.md"
 usage = [
   "acttex <initial|compile|rebuild> [main.tex]",

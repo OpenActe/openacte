@@ -3,7 +3,7 @@ directory = "actos"
 repository = "https://github.com/grosjeanbaptiste/actos"
 kind = "cli"
 binary = "actos"
-role = "`actos` is one app to administer a machine: its hardware components, its inputs and outputs (network and physical ports), and its bytes (files, archives, duplicates — handled with the dedicated"
+role = "One app to administer the local machine: hardware components, inputs and outputs (network and physical ports), and bytes (files, archives, duplicates, delegated to actmorph); a desktop dashboard without a command, one report per command; disk reports and clean-up of space (ss). Does not provision packages (dotfiles), administer remote servers (actserve) nor index what each volume holds (actparc, which calls actos scan)."
 readme = "actos/README.md"
 usage = [
   "actos <command>; commands listed by `actos --help`",

@@ -3,7 +3,7 @@ directory = "Actit"
 repository = "https://github.com/grosjeanbaptiste/Actit"
 kind = "cli"
 binary = "actit"
-role = "Does a tool already exist for this need? Actit answers from indexer (the catalogue of packages) and kag (reads their documentation, cites sources). It uses no other search engine and no LLM."
+role = "Does a tool already exist for this need? Answers from actindexer (the catalogue of packages) and kag (reads their documentation, cites sources), with no other search engine and no LLM. Does not generate code nor implement the tool."
 readme = "Actit/README.md"
 usage = [
   "actit --name <repo> [--owner <owner> | --contains]",
