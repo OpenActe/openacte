@@ -201,3 +201,9 @@ Codex and any agent that reads skills can load it.
 - Other agents: copy or link `skills/openacte/` into the agent's skills folder.
 - The skill is generated from `registry/*.toml`: after changing the registry run
   `cargo run`; CI runs `cargo run -- --check`.
+
+`skills/baba/SKILL.md` is a second skill, written by hand: it installs Baba when
+it is missing (dependencies, the root and six sub-repositories, bootstrap, build,
+`baba doctor`) and does nothing when Baba is already installed and healthy.
+`tests/baba_skill.rs` pins its order and its safety rules. Its repositories are
+private except `baba-config`, so it needs GitHub access.
