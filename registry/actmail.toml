@@ -3,7 +3,7 @@ directory = "actmail"
 repository = "https://github.com/grosjeanbaptiste/actmail"
 kind = "cli"
 binary = "actmail"
-role = "Read-only search over every mailbox listed in the `dotfiles mail` manifest, over IMAP or from the archived Maildirs."
+role = "Read-only search over every mailbox listed in the `dotfiles mail` manifest, over IMAP or from the archived Maildirs. Nothing is marked read, moved or deleted; credentials come from actesskey at run time. Does not send mail."
 readme = "actmail/README.md"
 usage = [
   "actmail --since YYYY-MM-DD [account...] [--subject TEXT [--save DIR] [--export DIR]]",

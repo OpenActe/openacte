@@ -3,7 +3,7 @@ directory = "actinstall"
 repository = "https://github.com/grosjeanbaptiste/actinstall"
 kind = "cli"
 binary = "actinstall"
-role = "Keeps the cargo-installed binaries of local repositories at their repository's latest version."
+role = "Keeps the cargo-installed binaries of local repositories at their repository latest version (update, sync, list) and installs or removes packages through pipx, uv and npm, recording them in the manifest of the state repository (taking over dotfiles add, remove, search). Does not decide what must be present (actparc knows that and asks it) nor hold the global machine manifest (dotfiles)."
 readme = "actinstall/README.md"
 usage = [
   "actinstall update",

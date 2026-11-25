@@ -3,7 +3,7 @@ directory = "actautoma"
 repository = "https://github.com/grosjeanbaptiste/actautoma"
 kind = "cli"
 binary = "actautoma"
-role = "Automation around the repository-hosting platforms (gh, glab): the gh adapter, ship (push, pull request, gate, merge) and rename-repo; adaptive workflows are its stated direction (ROADMAP). Does not run the gates itself (actcdi); the caller names the gate."
+role = "Workflows that chain several git and gh verbs, plus the gh adapter: ship (push, pull request, optional gate, merge; never merges acteble_api or melos_apps) and rename-repo (uses actpath). Adaptive resolution of the situation is its stated direction (ROADMAP). Does not hold the single verbs on a repository, commit, push, pull, branches, worktrees, pull requests (actrepo), nor run gates itself (actcdi)."
 readme = "actautoma/README.md"
 usage = [
   "actautoma rename-repo OWNER/OLD NEW [--dir OLD_DIR] [--root DIR]... [--children DIR]... [--registry FILE] [--bin-dir DIR] [--into DIR] [--local-only] [--dry-run]",

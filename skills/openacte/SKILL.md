@@ -26,7 +26,7 @@ hand; change the registry and regenerate.
 
 ### actautoma (cli)
 
-Automation around the repository-hosting platforms (gh, glab): the gh adapter, ship (push, pull request, gate, merge) and rename-repo; adaptive workflows are its stated direction (ROADMAP). Does not run the gates itself (actcdi); the caller names the gate.
+Workflows that chain several git and gh verbs, plus the gh adapter: ship (push, pull request, optional gate, merge; never merges acteble_api or melos_apps) and rename-repo (uses actpath). Adaptive resolution of the situation is its stated direction (ROADMAP). Does not hold the single verbs on a repository, commit, push, pull, branches, worktrees, pull requests (actrepo), nor run gates itself (actcdi).
 
 - repository: https://github.com/grosjeanbaptiste/actautoma
 - binary: `actautoma`
@@ -56,7 +56,7 @@ Configuration of a machine and its fleet, extracted from dotfiles slice by slice
 
 ### actempo (cli)
 
-Scheduler of acts for agentic sessions: given acts (units of agent work with dependencies, priority, deadline, release time, allowed providers, token cost) and sessions (each of a provider, one act at a time, providers with a token budget), it returns a plan: which act runs on which session, when, and which acts could not be placed and why. Nothing is dropped silently.
+Scheduler of acts for agentic sessions: given acts (dependencies, priority, deadline, release time, allowed providers, token cost) and sessions, returns a plan saying which act runs on which session and when, and which acts could not be placed and why. Secondary: a slot-based agenda schedule. Does not execute the acts (actserve, actqueue) nor measure token budgets (actusext).
 
 - repository: https://github.com/grosjeanbaptiste/actempo
 - binary: `actempo`
@@ -68,7 +68,7 @@ Scheduler of acts for agentic sessions: given acts (units of agent work with dep
 
 ### actesskey (cli)
 
-Secrets, keys and passwords of the machine, in one place. It is replacing the secret handling of `dotfiles`.
+Secrets, keys and passwords of the machine in one place: age-encrypted blobs in a store, the age key in the macOS Keychain; values travel on stdin, never on a command line. Replaces dotfiles secret slice by slice. Does not log in to anything itself (actessh, actparc ask it for a credential when they need one).
 
 - repository: https://github.com/grosjeanbaptiste/actesskey
 - binary: `actesskey`
@@ -77,7 +77,7 @@ Secrets, keys and passwords of the machine, in one place. It is replacing the se
 
 ### actinstall (cli)
 
-Keeps the cargo-installed binaries of local repositories at their repository's latest version.
+Keeps the cargo-installed binaries of local repositories at their repository latest version (update, sync, list) and installs or removes packages through pipx, uv and npm, recording them in the manifest of the state repository (taking over dotfiles add, remove, search). Does not decide what must be present (actparc knows that and asks it) nor hold the global machine manifest (dotfiles).
 
 - repository: https://github.com/grosjeanbaptiste/actinstall
 - binary: `actinstall`
@@ -87,7 +87,7 @@ Keeps the cargo-installed binaries of local repositories at their repository's l
 
 ### actit (cli)
 
-Does a tool already exist for this need? Actit answers from indexer (the catalogue of packages) and kag (reads their documentation, cites sources). It uses no other search engine and no LLM.
+Does a tool already exist for this need? Answers from actindexer (the catalogue of packages) and kag (reads their documentation, cites sources), with no other search engine and no LLM. Does not generate code nor implement the tool.
 
 - repository: https://github.com/grosjeanbaptiste/Actit
 - binary: `actit`
@@ -109,7 +109,7 @@ Shows the current usage limits of the coding agents (Claude, Codex, agents with 
 
 ### actmail (cli)
 
-Read-only search over every mailbox listed in the `dotfiles mail` manifest, over IMAP or from the archived Maildirs.
+Read-only search over every mailbox listed in the `dotfiles mail` manifest, over IMAP or from the archived Maildirs. Nothing is marked read, moved or deleted; credentials come from actesskey at run time. Does not send mail.
 
 - repository: https://github.com/grosjeanbaptiste/actmail
 - binary: `actmail`
@@ -142,7 +142,7 @@ Deterministic, offline semantic naming engine: generates names with strategies a
 
 ### actos (cli)
 
-`actos` is one app to administer a machine: its hardware components, its inputs and outputs (network and physical ports), and its bytes (files, archives, duplicates — handled with the dedicated
+One app to administer the local machine: hardware components, inputs and outputs (network and physical ports), and bytes (files, archives, duplicates, delegated to actmorph); a desktop dashboard without a command, one report per command; disk reports and clean-up of space (ss). Does not provision packages (dotfiles), administer remote servers (actserve) nor index what each volume holds (actparc, which calls actos scan).
 
 - repository: https://github.com/grosjeanbaptiste/actos
 - binary: `actos`
@@ -162,7 +162,7 @@ Inventory of the fleet: which machines, volumes, servers and packages exist and 
 
 ### actqueue (cli)
 
-Manages queues of jobs (the heavy queue and its lanes), working in pair with actempo.
+Job queues: the heavy queue and its lanes (quick, medium, dotfiles, heavy, heavy2), the slots, who waits behind whom, running a job in its turn and returning its exit code (actqueue run, report, state). Does not decide when a job should run (actempo plans, actqueue executes in turn), run the gates (actcdi) nor supervise long processes (actserve).
 
 - repository: https://github.com/grosjeanbaptiste/actqueue
 - binary: `actqueue`
@@ -180,7 +180,7 @@ Manages git repositories by reusing what exists: scaffolding, checking, renaming
 
 ### actsessions (cli)
 
-Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigravity, Aider, etc.) sur une machine locale.
+Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigravity, Aider, etc.) sur une machine locale. Limits not documented in its README.
 
 - repository: https://github.com/grosjeanbaptiste/actsessions
 - binary: `actsessions`
@@ -219,7 +219,7 @@ Forecast and plan of the coding agents weekly usage (Claude Code, Codex, Gemini)
 
 ### baba (cli)
 
-A shell-like CLI you talk to in (controlled) English, powered by pure symbolic AI, with no LLM in the loop.
+A shell-like CLI you talk to in (controlled) English, powered by pure symbolic AI, with no LLM in the loop. Delegates multi-step workflows to actautoma and session persistence to actsessions (per ecosystem.md); other limits not documented in its README.
 
 - repository: https://github.com/grosjeanbaptiste/baba
 - binary: `baba`
@@ -228,7 +228,7 @@ A shell-like CLI you talk to in (controlled) English, powered by pure symbolic A
 
 ### openacte (cli)
 
-Generate the OpenActe agent skill from registry/*.toml: the catalogue of every repository in this folder.
+Generate the OpenActe agent skill from registry/*.toml: the catalogue of every repository in this folder. Generates only: the registry is the source of truth, the page is never edited by hand.
 
 - repository: https://github.com/OpenActe/openacte
 - binary: `openacte-skill`
@@ -238,7 +238,7 @@ Generate the OpenActe agent skill from registry/*.toml: the catalogue of every r
 
 ### actart (service)
 
-Legal reasoning engine, Belgian law first: from a need or a file, find the applicable texts, reason about how they apply, answer with citations. Orchestrates specialised repositories (one per legal domain), consumed by tag or rev.
+Legal reasoning engine, Belgian law first: from a need or a file, find the applicable texts, reason about how they apply, answer with citations. Orchestrates specialised repositories (one per legal domain), consumed by tag or rev. Takes the addresses of legal sources from actindexer and reads and cites them through kag; it does not hold either itself.
 
 - repository: https://github.com/grosjeanbaptiste/actart
 - binary: `actart-api`
@@ -246,14 +246,14 @@ Legal reasoning engine, Belgian law first: from a need or a file, find the appli
 
 ### actedu (service)
 
-Cartographie unifiée des cursus d'enseignement supérieur et du graphe des savoirs académiques.
+Unified map of higher-education curricula and of the graph of academic knowledge (the actcook and actrack equivalent for education); sources are surveyed through kag and actindexer. Limits not documented in its README.
 
 - repository: https://github.com/grosjeanbaptiste/actedu
 - directory: `actedu`
 
 ### actindexer (service)
 
-Index of external data sources (knowledge bases, event providers, third-party services, datasets) and of chosen books and software packages, in one format, for any project. One TOML file per source, validated by Rust, rendered to JSON and served as a public read API at https://indexer.acteble.workers.dev.
+Index of external data sources (knowledge bases, event providers, third-party services, datasets) and of chosen books and software packages, in one format, for any project. One TOML file per source, validated by Rust, rendered to JSON and served as a public read API at https://indexer.acteble.workers.dev. Does not read or cite the documentation of a source (kag does).
 
 - repository: https://github.com/grosjeanbaptiste/actindexer
 - binary: `actindexer`
@@ -261,7 +261,7 @@ Index of external data sources (knowledge bases, event providers, third-party se
 
 ### actserve (service)
 
-Actserve est un orchestrateur universel en Rust conçu pour l'administration intégrale de serveurs. Il unifie l'ensemble de la chaîne de valeur système et cloud : noms de domaine (Registrars), zones et enregistrements DNS, délivrance de certificats TLS/SSL Let's Encrypt, tunnels VPN WireGuard, moteurs d'automatisation déclarative (OpenTofu, Ansible, Crossplane), et réutilisation maximale de dépôts d'administration existants (Ansible Galaxy, LinuxServer.io, collections GitHub Sysadmin & Homelab).
+Universal Rust orchestrator for the administration of remote servers: domain names (registrars), DNS zones and records, Let Encrypt TLS certificates, WireGuard tunnels, declarative automation engines (OpenTofu, Ansible, Crossplane) and reuse of existing administration repositories, behind a REST API for actserve-ui. Does not provision the local machine (dotfiles) nor run the media pipeline (actcast).
 
 - repository: https://github.com/grosjeanbaptiste/actserve
 - binary: `actserve`
@@ -284,7 +284,7 @@ Knowledge of food and cooking, the actedu equivalent for ingredients and cuisine
 
 ### actessh (library)
 
-SSH client. Keys and passwords come from actesskey.
+SSH client. Keys and passwords come from actesskey. Does not store secrets (actesskey). Other limits not documented.
 
 - repository: https://github.com/grosjeanbaptiste/actessh
 - directory: `actessh`
@@ -299,7 +299,7 @@ Turns a project into its artifact with one verb, build; the caller picks the eng
 
 ### actpath (library)
 
-Everything about paths: rewriting the references to a renamed repository, moves, worktree repair, cargo install records (ADR 0001). Today only the first is built.
+Library, no binary yet: the literal forms a renamed repository is written in (slug, directory, home form, encoded file name) and rewriting text that references it; moves, worktree repair and cargo install records are planned, not built. Does not rename the repository (actautoma rename-repo calls it) nor run any git command.
 
 - repository: https://github.com/grosjeanbaptiste/actpath
 - usage: `actpath::realign::{for_repo, replace, replace_words, encoded}`
@@ -307,7 +307,7 @@ Everything about paths: rewriting the references to a renamed repository, moves,
 
 ### actcdi (scaffold)
 
-Executes CI/CD: runs the gates (lint, tests, builds), shards them and selects what to run, for every repository.
+Executes CI/CD for every repository: runs the pre-commit and pre-push gates (lint, tests, builds), shards a suite and selects the tests to run from the changes. Does not hold the test index (dotfiles test-index), plan (actempo), queue heavy jobs (actqueue) nor supervise processes (actserve).
 
 - repository: https://github.com/grosjeanbaptiste/actcdi
 - directory: `actcdi`
@@ -321,7 +321,7 @@ Technology stack of a project: databases, containers and the services around the
 
 ### acteag (workspace)
 
-A purely algorithmic, domain-agnostic framework for benchmarking Retrieval-Augmented Generation pipelines, organized around a taxonomy of interchangeable components. Every pipeline stage and every evaluation metric is one algorithm among a family, selected by label and swappable without touching the rest.
+A purely algorithmic, domain-agnostic framework for benchmarking Retrieval-Augmented Generation pipelines, organized around a taxonomy of interchangeable components. Every pipeline stage and every evaluation metric is one algorithm among a family, selected by label and swappable without touching the rest. Limits not documented in its README.
 
 - repository: https://github.com/grosjeanbaptiste/acteag
 - binary: `acteag`
@@ -343,7 +343,7 @@ Store of knowledge: courses, worked solutions and converted documents (Polytech 
 
 ### actdevice (unverified)
 
-Run or install an app (Flutter, Dioxus, or any project with a `scripts/device-install.sh` hook) on an iOS simulator, an Android device or the host.
+Runs or installs an app (Flutter, Dioxus, or any project with a scripts/device-install.sh hook) on an iOS simulator, an Android device or the host; library entry point session::execute. Limits not documented in its README.
 
 - repository: https://github.com/grosjeanbaptiste/actdevice
 - directory: `actdevice`

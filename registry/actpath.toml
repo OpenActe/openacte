@@ -2,7 +2,7 @@ name = "actpath"
 directory = "actpath"
 repository = "https://github.com/grosjeanbaptiste/actpath"
 kind = "library"
-role = "Everything about paths: rewriting the references to a renamed repository, moves, worktree repair, cargo install records (ADR 0001). Today only the first is built."
+role = "Library, no binary yet: the literal forms a renamed repository is written in (slug, directory, home form, encoded file name) and rewriting text that references it; moves, worktree repair and cargo install records are planned, not built. Does not rename the repository (actautoma rename-repo calls it) nor run any git command."
 readme = "actpath/README.md"
 usage = [
   "actpath::realign::{for_repo, replace, replace_words, encoded}",

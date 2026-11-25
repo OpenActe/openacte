@@ -3,7 +3,7 @@ directory = "actsessions"
 repository = "https://github.com/grosjeanbaptiste/actsessions"
 kind = "cli"
 binary = "actsessions"
-role = "Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigravity, Aider, etc.) sur une machine locale."
+role = "Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigravity, Aider, etc.) sur une machine locale. Limits not documented in its README."
 readme = "actsessions/README.md"
 usage = [
   "actsessions list [--json]",

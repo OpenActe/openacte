@@ -3,7 +3,7 @@ directory = "openacte"
 repository = "https://github.com/OpenActe/openacte"
 kind = "cli"
 binary = "openacte-skill"
-role = "Generate the OpenActe agent skill from registry/*.toml: the catalogue of every repository in this folder."
+role = "Generate the OpenActe agent skill from registry/*.toml: the catalogue of every repository in this folder. Generates only: the registry is the source of truth, the page is never edited by hand."
 readme = "openacte/README.md"
 usage = [
   "openacte-skill",
