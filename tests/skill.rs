@@ -143,7 +143,10 @@ fn committed_skill_matches_the_registry() {
 fn page_tells_to_grow_a_repository_or_create_one() {
     let entries = load(&repo(&[("a.toml", CLI)])).unwrap();
     let page = render(&entries);
-    assert!(page.contains("## When no repository does the job"), "{page}");
+    assert!(
+        page.contains("## When no repository does the job"),
+        "{page}"
+    );
     assert!(page.contains("add it to that repository"), "{page}");
     assert!(page.contains("create a new repository"), "{page}");
 }
