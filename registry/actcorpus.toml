@@ -1,0 +1,6 @@
+name = "actcorpus"
+directory = "actcorpus"
+repository = "https://github.com/grosjeanbaptiste/actcorpus"
+kind = "unverified"
+role = "Store of knowledge: courses, worked solutions and converted documents (Polytech first), with the Rust chain that mirrors Moodle documents to Drive and checks them. Its README still describes only the fluid-mechanics worked solution."
+readme = "actcorpus/README.md"

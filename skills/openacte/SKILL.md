@@ -41,7 +41,7 @@ Actcast est l'orchestrateur de la stack multimédia et de téléchargement de l'
 
 ### actconf (cli)
 
-Manages the configuration of a fleet: machines, volumes and servers. Today it only lists the Stow packages of a machine.
+Configuration of a machine and its fleet, extracted from dotfiles slice by slice. Today it only lists the Stow packages of a machine. The inventory of what exists (volumes, servers) is actparc.
 
 - repository: https://github.com/grosjeanbaptiste/actconf
 - binary: `actconf`
@@ -145,11 +145,13 @@ Actname is a deterministic, offline-first semantic naming engine written in Rust
 
 ### actparc (cli)
 
-Manages the configuration of a fleet: machines, volumes and servers. Today it only lists the Stow packages of a machine.
+Inventory of the fleet: which machines, volumes, servers and packages exist and what each storage volume holds (indexed by UUID). Records and reads that state; it does not operate servers (actserve) nor install software (actinstall).
 
 - repository: https://github.com/grosjeanbaptiste/actparc
 - binary: `actparc`
 - usage: `actparc packages`
+- usage: `actparc scan PATH...`
+- usage: `actparc scan --all`
 - directory: `actparc`
 
 ### actqueue (cli)
@@ -267,6 +269,13 @@ Administration interface of [actserve](../actserve): servers, domains and DNS, W
 - binary: `actserve-ui`
 - directory: `actserve-ui`
 
+### actcook (library)
+
+Knowledge of food and cooking, the actedu equivalent for ingredients and cuisine. Today an ingredient database stored as XML and validated by an XSD schema; amounts per 100 g of edible part, kept per source so provenance is never lost.
+
+- repository: https://github.com/grosjeanbaptiste/actcook
+- directory: `actcook`
+
 ### actessh (library)
 
 SSH client. Keys and passwords come from actesskey.
@@ -318,6 +327,13 @@ Workspace parent du projet Actrack — prédiction de la Coupe du Monde FIFA 202
 
 - repository: https://github.com/grosjeanbaptiste/actrack
 - directory: `actrack`
+
+### actcorpus (unverified)
+
+Store of knowledge: courses, worked solutions and converted documents (Polytech first), with the Rust chain that mirrors Moodle documents to Drive and checks them. Its README still describes only the fluid-mechanics worked solution.
+
+- repository: https://github.com/grosjeanbaptiste/actcorpus
+- directory: `actcorpus`
 
 ### actdevice (unverified)
 
