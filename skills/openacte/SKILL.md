@@ -20,7 +20,7 @@ hand; change the registry and regenerate.
 
 ### actautoma (cli)
 
-Rust library that handles the tools of repository-hosting platforms (`gh` for GitHub, `glab` for GitLab, and others). The `gh` adapter exists; this README states what exists today and grows with the API.
+Automation around the repository-hosting platforms (gh, glab): the gh adapter, ship (push, pull request, gate, merge) and rename-repo; adaptive workflows are its stated direction (ROADMAP). Does not run the gates itself (actcdi); the caller names the gate.
 
 - repository: https://github.com/grosjeanbaptiste/actautoma
 - binary: `actautoma`
@@ -29,7 +29,7 @@ Rust library that handles the tools of repository-hosting platforms (`gh` for Gi
 
 ### actcast (cli)
 
-Actcast est l'orchestrateur de la stack multimédia et de téléchargement de l'écosystème Acteble.
+Orchestrator of the media and download stack (arr applications, torrent clients, indexers), outside dotfiles: start, stop and health of the services, reactive triggers on indexer changes, declarative wanted films, series, music and books with Recyclarr quality profiles, offline TSV inventory of the local libraries.
 
 - repository: no remote registered
 - binary: `actcast`
@@ -91,7 +91,7 @@ Does a tool already exist for this need? Actit answers from indexer (the catalog
 
 ### actlimit (cli)
 
-Shows the usage limits of the coding agents (Claude, Codex, and the agents with a token budget) as one line each, fast enough for a shell prompt.
+Shows the current usage limits of the coding agents (Claude, Codex, agents with a token budget) as one line each, fast enough for a shell prompt. Does not forecast or plan the week (actusext).
 
 - repository: https://github.com/grosjeanbaptiste/actlimit
 - binary: `actlimit`
@@ -112,7 +112,7 @@ Read-only search over every mailbox listed in the `dotfiles mail` manifest, over
 
 ### actmorph (cli)
 
-Actmorph is a Rust project for managing files of every type. Generic catalog and file operations do not depend on media or extension recognition; format-aware metadata is an optional enrichment.
+Files of every type: a generic catalog and file operations, archives included, that do not depend on media or extension recognition; format-aware metadata is an optional enrichment.
 
 - repository: https://github.com/grosjeanbaptiste/Actmorph
 - binary: `actmorph`
@@ -126,7 +126,7 @@ Actmorph is a Rust project for managing files of every type. Generic catalog and
 
 ### actname (cli)
 
-Actname is a deterministic, offline-first semantic naming engine written in Rust.
+Deterministic, offline semantic naming engine: generates names with strategies and JSON output, no network, no LLM. actrepo uses it to name a repository. Does not check that a name is free (actit does).
 
 - repository: https://github.com/grosjeanbaptiste/Actname
 - binary: `actname`
@@ -165,7 +165,7 @@ Manages queues of jobs (the heavy queue and its lanes), working in pair with act
 
 ### actrepo (cli)
 
-Manage git repositories by reusing what exists: scaffolding, checking, renaming, workspaces, pull requests, install.
+Manages git repositories by reusing what exists: scaffolding, checking, renaming, workspaces, pull requests, install. Does not carry the stack verbs docker, db and redis (actstack) nor multi-step forge workflows (actautoma).
 
 - repository: https://github.com/grosjeanbaptiste/actrepo
 - binary: `actrepo`
@@ -188,7 +188,7 @@ Gestion et suivi unifiés des sessions d'agents IA (Claude Code, Codex, Antigrav
 
 ### acttex (cli)
 
-Build a LaTeX project: find its main file, run pdflatex / biber / makeglossaries.
+LaTeX engine: finds the main .tex file and runs pdflatex, biber and makeglossaries (initial, compile, rebuild). Does not choose between project kinds (actmake calls it).
 
 - repository: https://github.com/grosjeanbaptiste/acttex
 - binary: `acttex`
@@ -197,7 +197,7 @@ Build a LaTeX project: find its main file, run pdflatex / biber / makeglossaries
 
 ### actusext (cli)
 
-Usage limits of every coding agent (Claude Code, Codex, Gemini, ...): what is left of the week, and a plan that fits it.
+Forecast and plan of the coding agents weekly usage (Claude Code, Codex, Gemini): what is left of the week, a plan that fits it, who served a request in the last minutes. Replaces the dotfiles usage forecast and usage plan scripts. Does not render the shell prompt line (actlimit).
 
 - repository: https://github.com/grosjeanbaptiste/actusext
 - binary: `actusext`
@@ -285,7 +285,7 @@ SSH client. Keys and passwords come from actesskey.
 
 ### actmake (library)
 
-Turn a project into its artifact. One verb, `build`; the engine is chosen by the caller.
+Turns a project into its artifact with one verb, build; the caller picks the engine: Tex (through acttex), Html, Markdown, Cargo, Dioxus, Flutter. Does not detect the project kind (actrepo does).
 
 - repository: https://github.com/grosjeanbaptiste/actmake
 - usage: `actmake::build(&System, dir, Engine, &Options)`
@@ -308,7 +308,7 @@ Executes CI/CD: runs the gates (lint, tests, builds), shards them and selects wh
 
 ### actstack (scaffold)
 
-technology stack of a project: databases, containers, services (intent, nothing built yet)
+Technology stack of a project: databases, containers and the services around them. Meant to take over the docker, db and redis verbs of dotfiles project (intent, nothing built yet). Does not manage repositories (actrepo does).
 
 - repository: https://github.com/grosjeanbaptiste/actstack
 - directory: `actstack`
@@ -323,7 +323,7 @@ A purely algorithmic, domain-agnostic framework for benchmarking Retrieval-Augme
 
 ### actrack (workspace)
 
-Workspace parent du projet Actrack — prédiction de la Coupe du Monde FIFA 2026. Il regroupe des sous-projets qui sont chacun leur propre dépôt git (non imbriqués : ce dépôt racine les ignore via `.gitignore`).
+Knowledge of football and the FIFA World Cup 2026 prediction project, the actedu and actcook equivalent for sport. Workspace parent: its sub-projects are separate git repositories.
 
 - repository: https://github.com/grosjeanbaptiste/actrack
 - directory: `actrack`

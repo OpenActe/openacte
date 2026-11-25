@@ -3,7 +3,7 @@ directory = "Actmorph"
 repository = "https://github.com/grosjeanbaptiste/Actmorph"
 kind = "cli"
 binary = "actmorph"
-role = "Actmorph is a Rust project for managing files of every type. Generic catalog and file operations do not depend on media or extension recognition; format-aware metadata is an optional enrichment."
+role = "Files of every type: a generic catalog and file operations, archives included, that do not depend on media or extension recognition; format-aware metadata is an optional enrichment."
 readme = "Actmorph/README.md"
 usage = [
   "actmorph scan <library>",

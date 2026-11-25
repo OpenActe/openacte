@@ -3,7 +3,7 @@ directory = "actusext"
 repository = "https://github.com/grosjeanbaptiste/actusext"
 kind = "cli"
 binary = "actusext"
-role = "Usage limits of every coding agent (Claude Code, Codex, Gemini, ...): what is left of the week, and a plan that fits it."
+role = "Forecast and plan of the coding agents weekly usage (Claude Code, Codex, Gemini): what is left of the week, a plan that fits it, who served a request in the last minutes. Replaces the dotfiles usage forecast and usage plan scripts. Does not render the shell prompt line (actlimit)."
 readme = "actusext/README.md"
 usage = [
   "actusext codex",
