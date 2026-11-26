@@ -203,17 +203,22 @@ LaTeX engine: finds the main .tex file and runs pdflatex, biber and makeglossari
 
 ### actusext (cli)
 
-Forecast and plan of the coding agents weekly usage (Claude Code, Codex, Gemini): what is left of the week, a plan that fits it, who served a request in the last minutes. Replaces the dotfiles usage forecast and usage plan scripts. Does not render the shell prompt line (actlimit).
+Usage of every coding agent (Claude Code, Codex, Gemini, OpenCode and the others), read from their logs: limits and pace, tokens, cost, who served a request lately, the forecast of the week, and a plan that fits it. Replaces the dotfiles usage forecast and usage plan scripts. Does not render the shell prompt line (actlimit).
 
 - repository: https://github.com/grosjeanbaptiste/actusext
 - binary: `actusext`
 - usage: `actusext codex`
+- usage: `actusext codex tokens`
 - usage: `actusext claude`
 - usage: `actusext <agent> profile [--days N]`
+- usage: `actusext profile [--days N]`
 - usage: `actusext <agent> daily|models|projects|sessions [--days N]`
 - usage: `actusext claude guard [--days N] [--threshold TOKENS] [--min-requests N]`
 - usage: `actusext line <agent>`
 - usage: `actusext recommend <project> [--days N]`
+- usage: `actusext active [--json] [--within-minutes N]`
+- usage: `actusext forecast [--budget USD] [--history-factor N] [--plan-since D] [--json]`
+- usage: `actusext plan [--quiet]`
 - usage: `actusext plan --forecast FILE --roadmap FILE --today YYYY-MM-DD`
 - directory: `actusext`
 

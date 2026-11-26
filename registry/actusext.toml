@@ -3,15 +3,20 @@ directory = "actusext"
 repository = "https://github.com/grosjeanbaptiste/actusext"
 kind = "cli"
 binary = "actusext"
-role = "Forecast and plan of the coding agents weekly usage (Claude Code, Codex, Gemini): what is left of the week, a plan that fits it, who served a request in the last minutes. Replaces the dotfiles usage forecast and usage plan scripts. Does not render the shell prompt line (actlimit)."
+role = "Usage of every coding agent (Claude Code, Codex, Gemini, OpenCode and the others), read from their logs: limits and pace, tokens, cost, who served a request lately, the forecast of the week, and a plan that fits it. Replaces the dotfiles usage forecast and usage plan scripts. Does not render the shell prompt line (actlimit)."
 readme = "actusext/README.md"
 usage = [
   "actusext codex",
+  "actusext codex tokens",
   "actusext claude",
   "actusext <agent> profile [--days N]",
+  "actusext profile [--days N]",
   "actusext <agent> daily|models|projects|sessions [--days N]",
   "actusext claude guard [--days N] [--threshold TOKENS] [--min-requests N]",
   "actusext line <agent>",
   "actusext recommend <project> [--days N]",
+  "actusext active [--json] [--within-minutes N]",
+  "actusext forecast [--budget USD] [--history-factor N] [--plan-since D] [--json]",
+  "actusext plan [--quiet]",
   "actusext plan --forecast FILE --roadmap FILE --today YYYY-MM-DD",
 ]
